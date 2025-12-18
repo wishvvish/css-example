@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*white-space = 줄바꿈 제어*/
+    div{
+      width: 600px;
+      font-size: 1.5rem;
+      border:10px solid red;
+      white-space: nowrap;/*줄바꿈 금지
+      (기본값 = wrap)*/
+      overflow: hidden;/*요소밖으로 넘어가는 컨텐츠를 가려줌*/
+      text-overflow: ellipsis;/*말줄임표(...) 표시*/
+    }
+  </style>
+</head>
+<body>
+  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+  Cum, praesentium molestiae cumque amet adipisci placeat animi 
+  illo error incidunt, nisi sunt id repellendus. Illum quia, 
+  nemo fugiat deleniti velit reiciendis?</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*노말라이즈*/
+    *{margin: 0; padding: 0;}
+    ul, li{list-style:none;}
+    a{
+      color:inherit;/*부모요소로부터 상속받음*/
+      text-decoration: none;
+    }
+    /*부드러운 스크롤 이동*/
+    html{scroll-behavior:smooth ;}
+    
+    /*이곳에 스타일을 작성해 주세요*/
+    .clearfix::after{/*가상선택자(가상요소를 생성할때 사용)*/
+      content:"";
+      display: block;
+      clear: both;
+    }
+    /*----------------------------------------------------------*/
+    .menu-box-1>ul{
+      
+      width: 100%;
+      background-color: #fff;
+      margin:auto;
+      
+    
+    }
+    .menu-box-1 li{
+      float:left;
+    }
+    .menu-box-1 a{
+      background-color: #fff;
+      width: 100px;
+      display :block;
+      height:80px ;
+      line-height: 75px;
+      text-align: center;
+    }
+    .menu-box-1 a:hover{
+      background-color: deepskyblue;
+      color: #fff;
+    }
+    /* .menu-box-1 a:active{
+      transform:translateY(80px)
+    } */
+    nav a:active{background-color: black;
+    color: pink;}
+    nav a:hover{background-color: black;
+    color: pink;}
+    
+
+    /*============================*/
+    /*각 영역의 높이를 지정*/
+    section{    
+      height:800px;  
+      color:#fff;  
+    }
+    /*각 영역을 구분하기위해 배경색을 따로 설정 한다.*/
+    #home{ background-color:pink; }
+    #about{ background-color:khaki; }
+    #profile{ background-color:orange; }
+    #portfolio{ background-color:skyblue; }
+    #skill{ background-color:olive; }
+  </style>
+</head>
+
+<body>
+  <nav class="menu-box-1">
+    <!--이곳에 내비게이션 작성-->
+    <ul class="clearfix">
+      <li><a href="#home">home</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#profile">profile</a></li>
+      <li><a href="#portfolio">portfolio</a></li>
+      <li><a href="#skill">skill</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">home</section>
+  <section id="about">about</section>
+  <section id="profile">profile</section>
+  <section id="portfolio">portfolio</section>
+  <section id="skill">skill</section>
+</body>
+
+</html>

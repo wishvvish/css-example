@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*문제 - a에 마우스를 올리면 인접동생인 div가 나타나게 해주세요.(즉 a의 인접동생인 div는 평소에 안나와야 합니다.)*/
+    section {
+      font-size: 5rem;
+    }
+    a + div{/*a요소의 다음 형제인 div요소를 선택(section의 두번째 자식으로도 가능)*/
+      display:none;/**/
+    }
+    a:hover + div{/*a요소에 마우스를 올리면 a의 다음 형제인 div요소를 나타나게 함*/
+      display:block;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <a href="#">버튼</a>
+    <div>안녕</div>
+    <div>잘가</div>
+  </section>
+</body>
+
+</html>

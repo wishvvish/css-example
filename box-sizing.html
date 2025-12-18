@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*공통속성*/
+    div{
+      width: 200px;
+      margin: 20px;
+      padding: 20px;
+      border: 20px solid black;
+      background-color: blue;
+      color:#fff;
+      font-size: 20px;
+    }
+    
+    .content-box{
+      background-color: orange;
+      box-sizing: content-box;/*기본값*/
+    }
+    /*width, height속성이 padding과 border를 포함한다*/
+    .border-box{
+      box-sizing: border-box;
+    }
+    .container{
+      width: 300px;
+      border: 1px solid red;
+      background-color: #ababab;
+    }
+    .box1{
+      width: 100%;
+      background-color: skyblue;
+      border: 10px solid black;
+      box-sizing: content-box;/*기본값*/
+      /* 요소의 넓이가 100%(요소가 차지할 수 있는 최대 넓이)
+      에서 테두리 10px 만큼 추가되어 부모요소 보다 커짐 
+      -> 결과적으로 레이아웃이 무너진다 */
+    }
+    .box2{
+      width: 100%;
+      border: 10px solid blue;
+      background-color: lightgreen;
+      box-sizing: border-box;/*width에 border가 포함되어
+      width가 100% 이상 늘어나지 않는다*/
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="content-box">content-box</div>
+  <div class="border-box">border-box</div>
+
+  <section class="container">
+    <article class="box1">Box 1</article>
+    <article class="box2">Box 2</article>
+  </section>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    /*1번 문제*/
+    .card-container {
+      text-align: center;
+      padding: 20px;
+    }
+    .card{
+      background-color: lightcoral;color: #fff;
+      line-height: 150px;
+      border-radius: 8px;
+      margin: 20px auto;
+      height: 150px;
+      min-width: 200px;
+      max-width: 400px;
+    }
+    /*=============*/
+    /*2번 문제*/
+    .profile-card{
+      background-color: skyblue;
+      width: 300px;
+      border-radius: 8px;
+      min-height: 250px;
+      max-height: 350px;
+      margin: auto;
+      padding:20px;
+      text-align: center;
+    }
+    
+    .profile-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .profile-info {
+      margin-top: 20px;
+    }
+
+    .profile-info h2 {
+      margin: 10px 0;
+      font-size: 24px;
+    }
+
+    .profile-info p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    /*=============*/
+    /*3번 문제*/
+    .banner-container {
+      text-align: center;
+      padding: 20px;
+    }
+    .banner-image{
+      width: 100%;
+      min-width: 300px;
+      max-width: 600px;
+      height: auto;/*넓이에 따라 높이의 비율이 고정되어 조절되게 만들어놓은 상태*/
+      min-height: 200px;
+      max-height: 400px;
+      border-radius: 8px;
+      object-fit:cover;
+      /*이미지의 가로 세로 비율을 유지하면서영역 전체에 이미지를 채움*/
+    }
+  </style>
+</head>
+
+<body>
+  <!--1번 문제-->
+  <div class="card-container">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+  </div>
+  
+  <!--2번 문제-->
+  <div class="profile-card">
+    <img src="https://picsum.photos/150" alt="Profile Picture" class="profile-image">
+    <div class="profile-info">
+      <h2>John Doe</h2>
+      <p>Web Developer</p>
+    </div>
+  </div>
+  
+  <!--3번 문제-->
+  <div class="banner-container">
+    <img src="https://picsum.photos/800/400" alt="Banner Image" class="banner-image">
+  </div>
+</body>
+
+</html>

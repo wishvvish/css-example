@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+    /*노멀라이징-------------------------------------*/
+    .clearfix::after{
+      content: "";
+      display:block;
+      clear:both;
+    }
+    /*클리어픽스핵-----------------------------------*/
+    nav{
+      background-color: orangered;
+      color: #fff;
+      width: 100%;
+      min-width: 1200px;
+    }
+    nav > .container{
+      width: 1200px;
+      margin: auto;
+      padding:0 10px;
+      box-sizing: border-box;
+      /*width값
+      안쪽으로 padding을 넣어준다*/
+    }
+    nav .logo{
+      float: left;
+      margin:10px 0;
+    }
+    nav .gnb{
+      float:right;
+    }
+    nav .gnb li{
+      float: left;
+      line-height:60px;
+      margin-left:60px;
+    }
+    img{
+      display: block;/*이미지(인라인)요소의 고유 여백제거용*/
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container clearfix">
+      <h1 class="logo"><a href="#">
+        <img src="images/logo2.png" alt="" width="40">
+      </a></h1>
+      <ul class="gnb">
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">BOARD</a></li>
+        <li><a href="#">ALBUM</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+</body>
+</html>

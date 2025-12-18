@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*노멀라이즈*/
+    *{margin: 0; padding: 0;}
+    ul, li{list-style:none;}
+    a{color:inherit;/*부모요소로부터 상속받음*/
+    text-decoration: none;}
+    /*------------클리어픽스핵*/
+    .clearfix::after{/*가상선택자(가상요소를 생성할때 사용)*/
+      content:"";
+      display: block;
+      clear: both;}
+      /*-----------------------*/
+      nav{
+      max-width: 1200px;
+      background-color: orangered;
+      color: #fff;
+      margin: auto;
+    }
+    nav > .container{
+      padding:10px;
+      margin: auto;
+    }
+    nav ul.gnb{float:right;}
+    nav li{float:left;}
+    nav li{
+      
+      font-size: 15px;
+      margin-right: 60px;}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container clearfix">
+      <ul class="gnb">
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">BOARD</a></li>
+        <li><a href="#">ALBUM</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <div class="container"></div>
+      <h1 class="logo"></div>
+      <ul>
+        <li><a href="#">SHAMMAH</a></li>
+      </ul>
+    </div>
+    
+    
+  </nav>
+</body>
+</html>

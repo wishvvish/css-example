@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 공통 스타일 */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+      
+
+    /*문제 1번: .container를 선택, 넓이를 500px로 설정하고 가운데 정렬*/
+    .container{
+    width: 500px;
+    margin: auto;
+    }
+    /*
+문제 2번: .box의 넓이 200px, 높이 150px, 각 .box사이의 여백 20px, 글자색 흰색, 
+글자크기 16px, 글자를 .box의 높이와 맞춰서 수직 가운데 정렬
+*/  
+    .box{
+      width: 200px; 
+      height: 150px;
+      margin: 20px;
+      color: #fff;
+      font-size: 16px;
+      line-height: 150px;
+      box-sizing:border-box
+    }
+
+    .box1{
+    
+      background-color: #3498db;
+      /* 파란색 */
+      
+    }
+
+    .box2{
+      
+      background-color: #2ecc71;
+      /* 초록색 */
+      
+      padding: 10px;
+      border: 5px solid black;
+      box-sizing:border-box
+    }
+
+    .box3 {
+      background-color: #e74c3c;
+      /* 빨간색 */
+      padding: 10px;
+      border: 10px solid black;
+    }
+
+
+    .box3 img {width:100%;
+      /*문제 3번: 이미지가 박스의 너비를 채우도록 설정합니다. */
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">
+      <img src="https://picsum.photos/300/200" alt="Example Image">
+      <p>Box 3 with an image</p>
+    </div>
+  </div>
+</body>
+
+</html>

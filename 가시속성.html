@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container1 > span{
+      background-color: aquamarine;
+      display:none;/*요소가 화면에서 사라짐*/
+      display:inline;/*width, height, margin, padding 속성을 적용할 수 없다*/
+      width:300px; height: 50px; margin: 10px;
+    }
+    .container1 > #box1{
+      display:inline-block;
+      /*width, height, margin, padding 속성을 적용할 수 있다*/
+    }
+    .container1 > #box2{
+      display:block;/*같은 줄에 다른 요소가 올 수 없다.*/
+    }
+
+    /*visibility속성*/
+    .container2 > .box{
+      width: 200px;
+      height: 100px;
+      margin: 10px auto;
+      background-color: coral;
+      color:#fff;
+      line-height: 100px;
+      font-size: 16px;
+      text-align: center;
+    }
+    .container2 > .visivle{
+      visibility: visible;/*기본값(default)*/
+    }
+
+    .container2 > .hidden{
+      visibility: hidden;
+      /*적용된 객체는 화면에서 사라지나
+      display:none과는 다르게 단지 시야에서만 보이지 않게 합니다*/
+    }
+
+    .container3 > span{
+      background-color: crimson;
+      color:#fff;
+      font-size: 20px;
+    }
+    .container3 > .box1{
+      opacity: 1;/*기본값(default)*/
+    }
+    .container3 > .box2{
+      opacity: 0.5;
+    }
+    .container3 > .box3{
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container1">
+    <span>display:inline</span>
+    <span id="box1">display:inline-block</span>
+    <span id="box2">display:block</span>
+  </div>
+
+  <div class="container2">
+    <div class="box hidden">hidden</div>
+    <div class="box visible">visible</div>
+  </div>
+
+  <div class="container3">
+    <span class="box1">opacity:1</span>
+    <span class="box2">opacity:0.5</span>
+    <span class="box3">opacity:0</span>
+  </div>
+    
+  </body>
+</html>
