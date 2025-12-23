@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>content정렬2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /*노멀라이즈*/
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    /*클리어픽스핵*/
+
+
+    .container {
+      
+      width: 1080px;
+      margin: 50px auto;
+    }
+
+    .container>.box {
+      float: left;
+      width: 250px;
+      margin:0 10px;
+      position: relative;
+    }
+
+    .box>img {display: block;}
+
+    .box >.txt,link {
+      position: absolute;
+      background-color: rgba(0,0,0,0.5);
+      color: #FFF;
+      inset:0;
+    }
+
+    .txt>h2 {
+      font-size: 24px;
+    }
+
+    .txt>p {
+      font-size: 14px;
+    }
+    /* .box:hover > .txt{display: block;} */
+  </style>
+</head>
+
+<body>
+  <div class="container clearfix">
+    <div class="box">
+    <img src="images/overlay1.png" alt="">
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Quae facere officiis
+        </p>
+        <div class="link">
+          <a href="#"><img sec="images/facebook.png" alt="facebook"></a>
+          <a href="#"><img sec="images/instagram.png" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+    <img src="images/overlay2.png" alt="">
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Quae facere officiis
+        </p>
+        <div class="link">
+          <a href="#"><img sec="images/facebook.png" alt="facebook"></a>
+          <a href="#"><img sec="images/instagram.png" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+    <img src="images/overlay3.png" alt="">
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Quae facere officiis
+
+        </p>
+        <div class="link">
+          <a href="#"><img sec="images/facebook.png" alt="facebook"></a>
+          <a href="#"><img sec="images/instagram.png" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+    <img src="images/overlay4.png" alt="">
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Quae facere officiis
+
+        </p>
+        <div class="link">
+          <a href="#"><img sec="images/facebook.png" alt="facebook"></a>
+          <a href="#"><img sec="images/instagram.png" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;
+    box-sizing: border-box;}
+    ul,li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+    /*-------------------------------------------*/
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;}
+      /*----------초기화 및 클리어픽스핵--------*/
+    section{margin: auto;}
+    nav{
+      background-color: orangered;
+      background-color: #f60;
+      color: #fff;
+      width: 100%;
+      min-width: 1200px;
+    }
+    nav > .menu-box{
+      width: 1200px;
+      margin: auto;
+    }
+
+    .menu-box{
+      
+      width: 1200px;
+      margin: auto;
+      font-family: "맑은 고딕";
+    } 
+    .menu-box>ul>li{
+      
+      float: left;
+      line-height:60px;
+      margin-left:60px;
+    }
+    .logo{float:left;}
+    .menu-box>ul{
+      width: 100%;
+    }
+    .menu-box>ul>li{
+      outline: 3px solid blue;
+      position: relative;
+      float:right;
+      
+    }
+    .menu-box>ul>li>a{
+      background-color: orangered;
+      display: block;
+      font-size: 18px;
+    }
+    .menu-box>h1,ul{background-color:blue; }
+    
+  </style>
+</head>
+<body>
+  <nav class="menu-box">
+    <h1 class="logo clearfix">
+      <a href="#"><b>SHAM</b>MAH</a>
+    </h1>
+    <ul class="gnb">
+      <li>
+        <a href="#">ABOUT</a>
+        <ul>
+          <li><a href="#">My Name</a></li>
+          <li><a href="#">Birth Day</a></li>
+          <li><a href="#">Education</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">NEWS</a>
+        <ul>
+          <li><a href="#">Today News</a></li>
+          <li><a href="#">Social</a></li>
+          <li><a href="#">Information</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">PORTFOLIO</a>
+        <ul>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Printout</a></li>
+          <li><a href="#">My Photo</a></li>
+          <li><a href="#">Illustration</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">BOARD</a>
+        <ul>
+          <li><a href="#">Notice</a></li>
+          <li><a href="#">Free Board</a></li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">ALBUM</a>
+        <ul>
+          <li><a href="#">Our Family</a></li>
+          <li><a href="#">My Friends</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">CONTACT</a>
+        <ul>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">E-mail</a></li>
+          <li><a href="#">Mobile Phone</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <section style="width: 1200px; height: 500px;
+  background-color: #000;"></section>
+
+</body>
+</html>

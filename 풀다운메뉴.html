@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    ul,li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+/*---------초기화-----및 클리어픽스-----------------------------------------*/
+    .menu-box{
+      outline: 1px solid cyan;
+      width: 800px;
+      margin: auto;
+    }
+    .menu-box > ul{
+      width: 100%;
+    }
+    .menu-box > ul > li{
+      width: 200px;
+      float: left;
+      position: relative;/*포지션:앱솔루트를 적용한 자식요소의 기준이 됨*/
+    }
+    .menu-box > ul > li > a{
+      /*1차 메뉴의 a요소*/
+      display: block;
+      width: 200px;
+      height: 40px;
+      font-size: 16px;
+      color: #111;
+      text-align: center;
+      line-height: 40px;
+      
+    }
+    .menu-box > ul > li > a:hover{/*하이라이트 효과*/
+      background-color: grey;
+      color: #fff;
+    }
+
+    /*서브메뉴*/
+    .menu-box > ul:hover > li > ul{
+      display: block;/*전체메뉴에 마우스를 올리면
+      서브메뉴가 화면에 나타남 -> ul:풀다운 li:다운*/
+    }
+    .menu-box > ul > li > ul{
+      display: none;/*서브메뉴를 화면에서 제거- ul에호버시 나타날수있게 ul:풀다운 li:다운*/
+      position: absolute;
+      width: 100%;
+      outline: 1px solid blue;
+    }
+    .menu-box > ul > li > ul > li > a{
+      display: block;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-color: skyblue;
+    }
+    .menu-box > ul > li > ul > li > a:hover{
+      background-color: blue;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- nav.menu-box>ul>li*4>a[href=#]{1차 메뉴 아이템$}+ul>li*4>a[href=#]{2차 메뉴 아이템$} -->
+  <nav class="menu-box">
+    <ul class="clearfix">
+      <li>
+        <a href="#">1차 메뉴 아이템1</a>
+        <ul>
+          <li><a href="#">2차 메뉴 아이템1</a></li>
+          <li><a href="#">2차 메뉴 아이템2</a></li>
+          <li><a href="#">2차 메뉴 아이템3</a></li>
+          <li><a href="#">2차 메뉴 아이템4</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">1차 메뉴 아이템2</a>
+        <ul>
+          <li><a href="#">2차 메뉴 아이템1</a></li>
+          <li><a href="#">2차 메뉴 아이템2</a></li>
+          <li><a href="#">2차 메뉴 아이템3</a></li>
+          <li><a href="#">2차 메뉴 아이템4</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">1차 메뉴 아이템3</a>
+        <ul>
+          <li><a href="#">2차 메뉴 아이템1</a></li>
+          <li><a href="#">2차 메뉴 아이템2</a></li>
+          <li><a href="#">2차 메뉴 아이템3</a></li>
+          <li><a href="#">2차 메뉴 아이템4</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">1차 메뉴 아이템4</a>
+        <ul>
+          <li><a href="#">2차 메뉴 아이템1</a></li>
+          <li><a href="#">2차 메뉴 아이템2</a></li>
+          <li><a href="#">2차 메뉴 아이템3</a></li>
+          <li><a href="#">2차 메뉴 아이템4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <section style="width: 100%; height: 500px;
+  background-color: gold;"></section>
+</body>
+</html>

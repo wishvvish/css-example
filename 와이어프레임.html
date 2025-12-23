@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>와이어프레임
+  </title>
+  <style>
+    *{margin: 0;padding: 0;}
+    ul,li{list-style: none;}
+
+    .clearfix::after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    header{
+      outline: 1px solid orange;
+      width: 840px;
+      height: 150px;
+      margin: 10px auto;
+      padding: 10px;
+      box-sizing: border-box;
+      /*height가 160으로 (padding값(10px 150->160)만큼) bax-sizing:border-box로 인해 늘어나지않는다*/
+    }
+    #logo{
+      width: 180px;
+      height: 60px;
+      outline: 1px solid blue;
+      margin:auto;
+    }
+    #gnb{
+      width: 840px;
+      height: 60px;
+      outline: 1px solid blue;
+      margin-top:10px;
+      overflow: hidden;/*자식요소의 margin-top이 적용된다*/
+    }
+    ul{
+      outline: 1px solid pink;
+      width: 360px;
+      height: 40px;
+      margin: 10px auto;
+    }
+    li{
+      width: 80px;
+      height: 30px;
+      outline: 1px dashed pink;
+      float:left;
+      margin: 5px;
+    }
+
+    #banner{
+      width: 840px;
+      height: 240px;
+      outline: 1px solid orange;
+      margin:10px auto;
+    }
+    #contents{
+      width: 840px;
+      height: 410px;
+      outline: 1px solid orange;
+      margin:10px auto;
+      
+    }
+    .box{
+      width: 260px;
+      height: 190px;
+      outline: 1px solid blue;
+      float:left;
+      margin:10px 10px 0;
+    }
+    footer{
+      width: 840px;
+      height: 90px;
+      outline: 1px solid orange;
+      margin:10px auto;
+    }
+    footer > div{
+      width: 260px;
+      height: 70px;
+      outline: 1px solid blue;
+      margin: 10px;
+    }
+    .left{float: left;}
+    .right{float: right;}
+    
+      
+  </style>
+</head>
+<body>
+  <header>
+    <div id="logo"></div>
+    <div id="gnb"></div>
+    <ul class="clearfix">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </header>
+  
+  <section id="banner"></section>
+  <section id="contents">
+    <article class="box"></article>
+    <article class="box"></article>
+    <article class="box"></article>
+    <article class="box"></article>
+    <article class="box"></article>
+    <article class="box"></article>
+  </section>
+  
+  <footer>
+    <div class="left"></div>
+    <div class="right"></div>
+  </footer>
+</body>
+</html>

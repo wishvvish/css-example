@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section{
+      width: 90vw;/*브라우저 넓이의 90%로설정*/
+      height: 90vh;/*브라우저 높이의 90%로설정*/
+      border:1px solid black;
+      margin:4vh auto;
+    }
+    section article{
+      background-size:100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      
+    }
+    section article:nth-child(1){/*첫번째 아티클 요소*/
+      background-image: url(images/car1.jpg);
+    }
+    section article:nth-child(2){/*두번째 아티클 요소*/
+      background-image: url(images/car2.jpg);
+    }
+    section article{
+      background-attachment:scroll ;/*기본값*/
+      background-attachment: fixed; /*배경이미지고정*/
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <article></article>
+    <article></article>
+  </section>
+  
+</body>
+</html>

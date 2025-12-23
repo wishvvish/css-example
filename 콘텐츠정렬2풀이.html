@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;
+    box-sizing: border-box;
+    user-select:none;/*텍스트 선택 막기(금지)*/}
+    a{text-decoration: none; color: inherit;}
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+    }/*클리어픽스 및 초기화*/
+    #container{
+      
+      width: 1080px;
+      margin: 50px auto;
+    }
+    .box{
+      width: 250px;
+      float: left;
+      margin: 0 10px;
+      position: relative;/*포지션:앱솔루트를 적용한 자식요소의 기준이 됨*/
+    }
+    .box > img{display: block;}
+    .box > .txt{
+      display: none;/*화면에서 제거*/
+      position: absolute;
+      background-color: rgba(0,0,0,0.5);
+      color: #fff;
+      inset:0;/*position속성을 적용한 부모 (조상) 요소의 크기로 설정*/
+      padding: 30px 20px;
+    }
+    .txt>h2{
+      font-size: 24px;
+    }
+    .txt>p{
+      font-size: 14px;
+      line-height: 24px;
+      margin:10px 0 20px;
+    }
+    .sns > a{
+      margin-right: 5px;
+    }
+    /*박스에 호버시 텍스트가 화면에 나타나는 효과*/
+    .box:hover > .txt{display: block;}
+    
+  </style>
+</head>
+<body>
+  <section id="container" class="clearfix">
+    <article class="box">
+      <img src="images/overlay1.png" alt="">
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eos.</p>
+        <div class="sns">
+          <a href="#">
+            <img src="images/facebook.png">
+          </a>
+          <a href="#">
+            <img src="images/instagram.png">
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="box">
+      <img src="images/overlay2.png" alt="">
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eos.</p>
+        <div class="sns">
+          <a href="#">
+            <img src="images/facebook.png">
+          </a>
+          <a href="#">
+            <img src="images/instagram.png">
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="box">
+      <img src="images/overlay3.png" alt="">
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eos.</p>
+        <div class="sns">
+          <a href="#">
+            <img src="images/facebook.png">
+          </a>
+          <a href="#">
+            <img src="images/instagram.png">
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="box">
+      <img src="images/overlay4.png" alt="">
+      <div class="txt">
+        <h2>Segment Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eos.</p>
+        <div class="sns">
+          <a href="#">
+            <img src="images/facebook.png">
+          </a>
+          <a href="#">
+            <img src="images/instagram.png">
+          </a>
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
