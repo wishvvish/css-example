@@ -5,71 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    /*공통 스타일*/
     div{
-      width: 100%;
-      height: 400px;
+      width:100%;
+      height:400px;
     }
     /*단일 배경 이미지*/
     .background-single{
-      /*배경 이미지*/
-      background-image: url(images/image1.jpg);
-      /*이미지 크기 설정*/
+      /*배경이미지*/
+      background-image:url(images/image1.jpg);
+      /*배경이미지 크기 설정*/
       background-size:100% 400px;/*넓이:100%, 높이:400px*/
-      /*contain:배경을 사용하는 요소를 벗어나지 않는 최대 크기로 이미지를 
-      확대 또는 축소, 가로세로 비율을 유지*/
-      background-size:contain ;
-      /*cover : 이미지가 요소를 완전히 채우도록 설정,
-      가로세로 비율을 유지*/
-      background-size: cover;
-      /*반복 배경 없음*/
+      /*contain : 배경을 사용하는 요소를 벗어나지 않는 최대 크기로 이미지를 확대 또는 축소, 가로 세로 비율을 유지*/
+      background-size:contain;
+      /*cover : 이미지가 요소를 완전히 채우도록 설정, 가로 세로 비율을 유지*/
+      background-size:cover;
+
+      /*반복 배경없음*/
       background-repeat:no-repeat;
-    }    
-    /*배경이미지와 색상 혼합*/
+    }
+
+    /*배경 이미지와 색상 혼합*/
     .background-color-image{
-      background-color:rgba(0,0,0,0.5); /*배경색 반투명 검정*/
+      background-color: rgba(0,0,0,0.5);/*배경색(반투명 검정)*/
       background-image:url(images/image1.jpg);
       background-size:cover;
-      /*색상과 이미지 혼합모드*/
+      /*색상과 이미지 혼합 모드 설정(블렌딩모드)*/
       background-blend-mode:multiply;
     }
-    /*여러 배경이미지*/
+
+    /*여러 배경 이미지*/
     .background-multiple{
-      background-image: url(images/fire.jpg), url(images/image1.jpg);
-      background-size:contain, cover;/*각 이미지의 크기조절*/
-      background-repeat: no-repeat;/*반복배경없음*/
-      background-blend-mode:screen ;
-      /*위치조절*/
-      background-position: top right,center;
+      background-image:url(images/fire.jpg), url(images/image1.jpg);
+      background-size:contain, cover;/*각 이미지의 크기 조절*/
+      background-repeat: no-repeat;/*반복 배경없음*/
+      background-blend-mode: screen;
+      /*위치 조절*/
+      background-position:top right, center;
     }
+
     /*공통속성*/
     .one, .two, .three{
-      background-color: #fe9;
+      background-color:#fe9;
       background-repeat: no-repeat;
-      width: 300px;
-      height: 80px;
-      margin-bottom: 12px;
+      width:300px;
+      height:80px;
+      margin-bottom:12px;
     }
-    /*백그라운드 속성 축약형*/
     .one{
-      background: url(images/spot.png) #fe9  10px bottom no-repeat;
+      /*백그라운드 속성 축약형*/
+      background:url(images/spot.png) #fe9 10px bottom no-repeat;
     }
-    .two{background-image: url(images/spot.png);
-    background-position: 3em 50%;}
+    .two{
+      background-image:url(images/spot.png);
+      background-position:3em 50%;
+    }
     .three{
-      background-image: url(images/logo_w.png), url(images/spot.png);
+      /*여러 배경 이미지*/
+      background-image:url(images/spot.png), url(images/logo_w.png);
       background-position: 0px 0px, center;
     }
   </style>
 </head>
 <body>
-  <!--백그라운드 이미지 속성-->
+  <!--background-image속성-->
   <div class="background-single"></div>
   <div class="background-color-image"></div>
   <div class="background-multiple"></div>
-  
-  <!--백그라운드 포지션 속성-->
-  <div class="one">Example one</div>
-  <div class="two">Example two</div>
-  <div class="three">Example three</div>
+
+  <!--background-position속성-->
+  <div class="one">Example One</div>
+  <div class="two">Example Two</div>
+  <div class="three">Example Three</div>
 </body>
 </html>

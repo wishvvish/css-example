@@ -7,54 +7,46 @@
   <title>Document</title>
   <style>
     /*노말라이즈*/
-    *{margin: 0; padding: 0;}
-    ul, li{list-style:none;}
-    a{
-      color:inherit;/*부모요소로부터 상속받음*/
-      text-decoration: none;
+    *{margin:0; padding:0;}
+    ul,li{list-style:none;}
+    a{text-decoration: none; color:inherit;}
+    /*클리어픽스핵*/
+    .clearfix::after{
+      content:"";
+      display:block;
+      clear:both;
     }
     /*부드러운 스크롤 이동*/
-    html{scroll-behavior:smooth ;}
-    
+    html{
+      scroll-behavior:smooth;
+    }
+
     /*이곳에 스타일을 작성해 주세요*/
-    .clearfix::after{/*가상선택자(가상요소를 생성할때 사용)*/
-      content:"";
-      display: block;
-      clear: both;
-    }
-    /*----------------------------------------------------------*/
-    .menu-box-1>ul{
-      
-      width: 100%;
-      background-color: #fff;
+    nav > ul{
+      width:1000px;
       margin:auto;
-      
-    
     }
-    .menu-box-1 li{
+    nav li{
       float:left;
     }
-    .menu-box-1 a{
-      background-color: #fff;
-      width: 100px;
-      display :block;
-      height:80px ;
-      line-height: 75px;
+    nav a{
+      display:block;
+      width:200px;
+      height:60px;
+      background-color:orange;
+      color:#fff;
       text-align: center;
+      line-height:60px;
     }
-    .menu-box-1 a:hover{
-      background-color: deepskyblue;
-      color: #fff;
+    nav a:hover{/*마우스오버*/
+      background-color:#ccc;
+      color:black;
     }
-    /* .menu-box-1 a:active{
-      transform:translateY(80px)
-    } */
-    nav a:active{background-color: black;
-    color: pink;}
-    nav a:hover{background-color: black;
-    color: pink;}
-    
-
+    nav a:active{/*마우스 클릭시*/
+      background-color:red;
+      color:#fff;
+      font-size:24px;
+    }
     /*============================*/
     /*각 영역의 높이를 지정*/
     section{    
@@ -71,7 +63,7 @@
 </head>
 
 <body>
-  <nav class="menu-box-1">
+  <nav>
     <!--이곳에 내비게이션 작성-->
     <ul class="clearfix">
       <li><a href="#home">home</a></li>

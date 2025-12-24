@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  /*
+  text(or)box-shadow : 오른쪽 아래 흐림도(생략은 가능)
+  확장값(그림자두께)(생략가능) 색상
+  */
+  div{
+    border: 3px solid black;
+    box-shadow: 10px 10px 30px black;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  }
+  div:nth-child(2){
+    margin-top: 60px;
+    /*중첩사용*/
+    /*inset : 키워드가 있으면 그림자를 프레임 안쪽으로 표현*/
+    box-shadow: inset 10px 10px 10px black,
+    10px 10px 20px orange, inset -10px -10px 30px red;
+  }
+
+  </style>
+</head>
+<body>
+  <!--
+  text-shadow속성 : 텍스트(글자)에 그림자를 부여하는 속성
+  box-shadow속성 : 태그(요소)에 그림자를 부여하는 속성-->
+  <div>
+    <h1>그림자 속성</h1>
+  </div>
+  <div>
+    <h1>안쪽 그림자</h1>
+  </div>
+</body>
+</html>

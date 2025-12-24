@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width:100%;/*width값을 정확하게 지정하면 트랜지션이 적용된다*/
+      height: 100px;
+      background-color: #afafaf;
+      opacity: 0.3;
+      /*변환효과 : 배경색이 변경되면 n초에 걸쳐 변경됨*/
+      transition:background-color 1s;
+    }
+    div:hover{
+      background-color: gold;
+      /*width에도 트랜지션을 주었지만 효과가
+      적용되지 않는 이유는 div의 width가 auto
+      이기 때문이다, 트랜지션을 적용하려면 크기를
+      명확하게 지정/적용 해야한다*/
+      width: 50%;
+      transition: background-color 2s, width 2s,
+      opacity 2s;
+      opacity: 1;
+      
+      /*all(생략가능) =모든 속성에 transition을 적용
+      ex: transition:2s; = transition:all 2s;*/
+      transition: all 2s;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <hr>
+  <div></div>
+</body>
+</html>

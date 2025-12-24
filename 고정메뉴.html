@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
+    ul,li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+    header, section, footer{
+      width: 1000px;
+      height: 900px;
+      margin: auto;
+    }
+    header{background-color: yellow;}
+    section{background-color: lightgreen;}
+    footer{background-color: skyblue;}
+    /*고정메뉴*/
+    .fixed_menu{
+      position: fixed;
+      width: 80px;
+      background-color: #fff;
+      text-align: center;
+      font-size: 14px;
+      top:100px;
+      /*
+      가운데를 기준으로 콘텐츠 넓이의 절반값만큼 오른쪽으로 이동시켜
+      브라우저의 넓이가 변경되더라도 항상 같은 위치에 있도록 설정
+      */
+      left:50%;
+      margin-left: 500px;
+    }
+    .fixed_menu > .title{
+      width: 100%;
+      height: 80px;
+      padding: 20px;
+      background-color: tomato;
+      color: #fff;
+      font-weight: bold;
+    }
+    .btn > li > a{
+      display: block;
+      width: 100%;
+      height: 80px;
+      padding: 30px 0;
+      color: #333;
+      border-bottom: 1px solid #999;
+    }
+    .btn>li:last-child>a{
+      border-bottom: none;/*topbtn과 메뉴 사이의 밑줄제거*/
+    }
+    .btn>li>a:hover{
+      color: tomato;
+    }
+    .top_btn{
+      width: 100%;
+      height: 60px;
+      background-color: tomato;
+      color: #fff;
+      padding: 20px 0;
+      font-weight: bold;
+      cursor: pointer;/*커서모양을 포인터로 변경*/
+    }
+    .btn{display: none;}
+  </style>
+</head>
+<body>
+  <div class="fixed_menu">
+    <div class="title">
+      Quick<br>
+      MENU
+    </div>
+    <ul class="btn">
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">MENU</a></li>
+    </ul>
+    <div class="top_btn">TOP</div>
+  </div>
+    <header></header>
+    <section></section>
+    <footer></footer>
+</body>
+</html>

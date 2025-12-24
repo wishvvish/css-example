@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .container > .hidden{
-      visibility:hidden;
-    }
-    .container > .box{
-      display:block
-    }
     .overlay {
-	line-height:4;
-	text-align:center;
-  background-color: #00000075;
-  /*#000000(00)-> (00)=투명도(opacity)*/ 
-  /*rgba(red:0~255, green:0~255, blue:0~255, opcity:0~1)*/
+      line-height: 4;
+      text-align: center;
+      /*rgba(red:0~255, green:0~255, blue:0~255, opacity:0~1)*/
+      background-color:rgba(173, 221, 30, 0.5);
+    }
+
+    /*1번 답*/
+    .hidden {
+      visibility: hidden;
+    }
+
+    /*2번 답*/
+    .box {
+      display: none;
+      /* 요소를 완전히 제거 */
+    }
+
+    /*3번 답*/
+    .text {
+      opacity: 0.75;
+      /* 텍스트의 투명도 조절 */
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-  <p class="text">이 텍스트는 보입니다.</p>
-  <p class="hidden">이 텍스트는 숨겨져야 합니다.</p>
-</div>
+    <p class="text">이 텍스트는 보입니다.</p>
+    <p class="hidden">이 텍스트는 숨겨져야 합니다.</p>
+  </div>
 
-<div class="box">이 박스는 보입니다.</div>
+  <div class="box">이 박스는 보입니다.</div>
 
-<div class="overlay">
-  <p class="text">이 텍스트는 배경 위에 있습니다.</p>
-</div>
-
+  <div class="overlay">
+    <p class="text">이 텍스트는 배경 위에 있습니다.</p>
+  </div>
 </body>
+
 </html>

@@ -5,72 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    /*노멀라이즈(초기화)*/
-    *{margin: 0; padding: 0;}
-    ul, li{list-style:none;}
+    /*노말라이즈*/
+    *{margin:0; padding:0;}
+    ul, li{
+      list-style:none;
+    }
     a{
       color:inherit;/*부모요소로부터 상속받음*/
       text-decoration: none;
     }
-    /*-----------------------------------*/
-    /*float를 사용하지 않는 방법*/
+    /*=========================*/
+    /*메뉴박스 1*/
     .menu-box-1{
       margin-top:50px;
       text-align: center;
     }
     .menu-box-1 > ul{
-      background-color: #dfdfdf;
+      background-color:#dfdfdf;
       display:inline-block;
       padding:0 10px;
       border-radius:10px;/*모서리를 둥글게*/
     }
-    .menu-box-1 li{/*menu-box-1의 후손인 li를 모두선택*/
-      display: inline-block;
-      
+    .menu-box-1 li{/*.menu-box-1의 후손인 li를 모두 선택*/
+      display:inline-block;
     }
     .menu-box-1 a{
-      padding: 20px;
       display:block;
+      padding:20px;
     }
-    .menu-box-1 a:hover{background-color: #9c9c9c;
-    color: #fff;}
-    
-    /*float 사용하여 정렬방법*/
+    .menu-box-1 a:hover{
+      background-color:tomato;
+      color:#fff;
+    }
+
+    /*float사용하여 메뉴 정렬*/
     .menu-box-2{
       margin-top:50px;
     }
     .menu-box-2 > ul{
-      /*요소의 크기에 영향을 주지않는 외곽선 : outline*/
-      
-      width: 800px; margin:auto;
+      /*요소의 크기에 영향을 주지않는 외곽선*/
+      /* outline:1px solid red; */
+      width:800px;
+      margin:auto;
     }
     /*클리어픽스핵*/
     .clearfix::after{/*가상선택자(가상요소를 생성할때 사용)*/
       content:"";
-      display: block;
-      clear: both;
+      display:block;
+      clear:both;
     }
 
     .menu-box-2 li{
       float:left;
     }
     .menu-box-2 a{
-      display: block;
-      width: 200px;
-      height: 60px;
-      background-color: #999;
-      color: #fff;
+      display:block;
+      width:200px;
+      height:60px;
+      background-color:#999;
+      color:#fff;
       text-align: center;
-      line-height: 60px;
+      line-height:60px;
     }
+
     .menu-box-2 a:hover{
-      background-color: #dfdfdf;
-      color: black;
+      background-color:violet;
     }
+    
   </style>
 </head>
 <body>
-  <!--float를 사용하지 않는 방법-->
+  <!--float을 사용하지 않는 방법-->
   <nav class="menu-box-1">
     <ul>
       <li><a href="#">메뉴 아이템 1</a></li>
@@ -79,16 +84,15 @@
       <li><a href="#">메뉴 아이템 4</a></li>
     </ul>
   </nav>
-  <!--float 사용하여 정렬방법-->
+  
+  <!--float을 사용하는 방법-->
   <nav class="menu-box-2">
     <ul class="clearfix">
-      <li><a herf>메뉴 아이템 1</a></li>
-      <li><a herf>메뉴 아이템 2</a></li>
-      <li><a herf>메뉴 아이템 3</a></li>
-      <li><a herf>메뉴 아이템 4</a></li>
+      <li><a href="#">메뉴 아이템 1</a></li>
+      <li><a href="#">메뉴 아이템 2</a></li>
+      <li><a href="#">메뉴 아이템 3</a></li>
+      <li><a href="#">메뉴 아이템 4</a></li>
     </ul>
-
   </nav>
-    
 </body>
 </html>

@@ -6,47 +6,46 @@
   <title>position속성</title>
   <style>
     .parent{
-      width: 100%;
-      background-color: #ccc;
-      position: relative;/*유령의 집화
-      : 부모요소를 유령의 집으로 만들면 그 안의 유령(자식요소)은 집안에서
-      위치 정렬이 됩니다 (앱솔루트를 부모요소안에서 정렬하고 싶을 때, 부모요소에 포지션:릴레이티브속성을 준다)*/
+      width:100%;
+      background-color:#ccc;
+      position:relative;/*유령의 집화 : 유령의 집으로 만들면 그안의 유령은 집안에 위치 정렬이 됩니다*/
     }
     .parent > .child{
-      width: 200px; height: 200px;
-      background-color: orange;
-      /*기본값 : 블록요소가 기본적으로 가지고 있는 포지션
-      (초기화할때 사용)*/
-      position: static;
+      width:200px; height:200px;
+      background-color:orange;
+      /*기본값 : 블록요소가 기본적으로 가지고 있는 포지션(초기화할때 사용)*/
+      position:static;
     }
     .parent > .ch1{
-      background-color: #fc0;
-      position: relative;/*공간을 차지한 상태로 띄워져 위치를 상대값으로 이동할수있다
-      top,bottom,left,right*/
+      background-color:#fc0;
+      position:relative;/*공간을 차지한 상태로 위치를 상대값으로 이동할수 있다*/
       top:100px;
       left:100px;
-      z-index: 1;/*z축으로 위치를 이동시키는 속성
-      높으면 높을수록 위(z축)로 올라온다*/
+      z-index: 10;/*z축으로 위치를 이동시키는 속성*/
     }
     .parent > .ch2{
-      background-color: #f70;
-      position:absolute;/*공중에 떠있는 상태(부유상태)
-      -공간을 차지하지않는다-
-      *절대값으로 위치를 이동할 수 있다(부모기준X->브라우저 기준으로 이동)*/
+      background-color:#f70;
+      position:absolute;/*부유상태(공간을 차지하지 않음,"유령화")*/
+      /*절대값으로 위치를 이동할수있다*/
       right:100px;
       bottom:100px;
+      /*
+      좌표속성
+      left:좌측 기준, right:우측 기준, top:상단 기준, bottom:하단 기준
+      */
     }
     .parent > .ch3{
-      background-color: #f00;
+      background-color:#f00;
       position:absolute;/*유령화*/
       left:0; top:0;
     }
+
+    
   </style>
 </head>
 <body>
   <h1>position속성 : 위치속성</h1>
   <div class="parent">
-    <!--div.child{BOX$}*3-->
     <div class="child ch1">BOX1</div>
     <div class="child ch2">BOX2</div>
     <div class="child ch3">BOX3</div>

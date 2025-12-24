@@ -1,6 +1,6 @@
 /*같은 선택자의 경우*/
 p{
-color: orange;
+  color:orange;
 }
 p{
   color:hotpink;
@@ -8,17 +8,17 @@ p{
 
 /*다른 선택자인 경우*/
 #css{
-  background-color: gray;
+  background-color:gray;
 }
 .css{
-  background-color: lightblue;
+  background-color:lightblue;
 }
 div{
-  width: 700px;
-  height: 400px;
-  background-color: yellow!important;
+  width:700px;
+  height:400px;
+  background-color:yellow!important;
 }
 
 body{
-  background-color: lightgray;
+  background-color:lightgray;
 }

@@ -4,24 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>선택자</title>
-  <!--CSS 내부정의-->
+  <!--css 내부정의-->
   <style>
     /*전체 선택자(*) : 문서에서 사용된 모든 태그를 선택합니다*/
     *{
-      /*속성이름=: 속성값=;*/
-      background-color: #ffcc00;
-      color:#ff0000;
+      /*속성이름:속성값;*/
+      background-color:#fc0;
+      color:#f00;
     }
     /*태그 선택자 : 태그 이름으로 선택된 대상*/
-    h1{background-color: #ccc;}
+    h1{
+      background-color:#ccc;
+    }
     /*아이디 선택자 : #아이디명으로 선택된 대상*/
-    #msh{background-color: #fff;}
+    #msh{
+      background-color:#fff;
+    }
     /*클래스 선택자 : .클래스명으로 선택된 대상*/
-    .web{color:#03f}
+    .web{
+      color:#03f;
+    }
   </style>
-  </head>
+</head>
 <body>
-  <hi id="msh">제목태그1-1</hi>
+  <h1 id="msh">제목태그1-1</h1>
   <h1 id="wsh" class="web">제목태그1-2</h1>
   <h1>제목태그1-3</h1>
   <h1 class="web">제목태그1-4</h1>

@@ -1,121 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>content정렬2</title>
+  <title>콘텐츠정렬(overlay)</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
+    *{
+      margin:0; padding:0; 
+      box-sizing: border-box;
+      user-select: none;/*텍스트 선택 금지*/
     }
-
-    a {
-      text-decoration: none;
-      color: inherit;
+    a{text-decoration: none; color:inherit;}
+    .clearfix::after{
+      content:"";
+      display:block;
+      clear:both;
     }
-
-    /*노멀라이즈*/
-    .clearfix::after {
-      content: "";
-      display: block;
-      clear: both;
+    #container{
+      width:1080px;
+      margin:50px auto;
     }
-
-    /*클리어픽스핵*/
-
-
-    .container {
-      
-      width: 1080px;
-      margin: 50px auto;
-    }
-
-    .container>.box {
-      float: left;
-      width: 250px;
+    .box{
+      width:250px;
+      float:left;
       margin:0 10px;
-      position: relative;
+      position:relative;/*pos:abs를 적용한 자식요소의 기준이 됨*/
     }
-
-    .box>img {display: block;}
-
-    .box >.txt,link {
-      position: absolute;
-      background-color: rgba(0,0,0,0.5);
-      color: #FFF;
-      inset:0;
+    .box > img{display:block;}
+    .box > .txt{
+      display:none;/*화면에서 제거*/
+      position:absolute;
+      background-color:rgba(0,0,0,0.5);
+      color:#fff;
+      inset:0;/*position속성을 적용한 부모(조상)요소의 크기로 설정*/
+      padding:30px 20px;
     }
-
-    .txt>h2 {
-      font-size: 24px;
+    .txt > h2{
+      font-size:24px;
     }
-
-    .txt>p {
-      font-size: 14px;
+    .txt > p{
+      font-size:14px;
+      line-height:24px;
+      margin:10px 0 20px;
     }
-    /* .box:hover > .txt{display: block;} */
+    .sns > a{margin-right:5px;}
+
+    /*.box에 마우스를 올리면 .txt가 화면에 나타나는 효과*/
+    .box:hover > .txt{
+      display:block;
+    }
   </style>
 </head>
-
 <body>
-  <div class="container clearfix">
-    <div class="box">
-    <img src="images/overlay1.png" alt="">
+  <section id="container" class="clearfix">
+    <article class="box">
+      <img src="images/overlay1.png" alt="">
       <div class="txt">
         <h2>Segment Title</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Quae facere officiis
-        </p>
-        <div class="link">
-          <a href="#"><img sec="images/facebook.png" alt="facebook"></a>
-          <a href="#"><img sec="images/instagram.png" alt="instagram"></a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, blanditiis.</p>
+        <div class="sns">
+          <a href="#"><img src="images/facebook.png"></a>
+          <a href="#"><img src="images/instagram.png"></a>
         </div>
       </div>
-    </div>
-    <div class="box">
-    <img src="images/overlay2.png" alt="">
+    </article>
+    <article class="box">
+      <img src="images/overlay2.png" alt="">
       <div class="txt">
         <h2>Segment Title</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Quae facere officiis
-        </p>
-        <div class="link">
-          <a href="#"><img sec="images/facebook.png" alt="facebook"></a>
-          <a href="#"><img sec="images/instagram.png" alt="instagram"></a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, blanditiis.</p>
+        <div class="sns">
+          <a href="#"><img src="images/facebook.png"></a>
+          <a href="#"><img src="images/instagram.png"></a>
         </div>
       </div>
-    </div>
-    <div class="box">
-    <img src="images/overlay3.png" alt="">
+    </article>
+    <article class="box">
+      <img src="images/overlay3.png" alt="">
       <div class="txt">
         <h2>Segment Title</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Quae facere officiis
-
-        </p>
-        <div class="link">
-          <a href="#"><img sec="images/facebook.png" alt="facebook"></a>
-          <a href="#"><img sec="images/instagram.png" alt="instagram"></a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, blanditiis.</p>
+        <div class="sns">
+          <a href="#"><img src="images/facebook.png"></a>
+          <a href="#"><img src="images/instagram.png"></a>
         </div>
       </div>
-    </div>
-    <div class="box">
-    <img src="images/overlay4.png" alt="">
+    </article>
+    <article class="box">
+      <img src="images/overlay4.png" alt="">
       <div class="txt">
         <h2>Segment Title</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Quae facere officiis
-
-        </p>
-        <div class="link">
-          <a href="#"><img sec="images/facebook.png" alt="facebook"></a>
-          <a href="#"><img sec="images/instagram.png" alt="instagram"></a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, blanditiis.</p>
+        <div class="sns">
+          <a href="#"><img src="images/facebook.png"></a>
+          <a href="#"><img src="images/instagram.png"></a>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
 </body>
-
 </html>

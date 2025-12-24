@@ -5,50 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    /*노멀라이즈*/
-    *{margin: 0; padding: 0;}
+    /*노말라이즈*/
+    *{margin:0; padding:0;}
     ul, li{list-style:none;}
-    a{color:inherit;/*부모요소로부터 상속받음*/
-    text-decoration: none;}
-    /*---------------------------------------------*/
-    .clearfix::after{/*가상선택자(가상요소를 생성할때 사용)*/
+    a{text-decoration: none; color:inherit;}
+    .clearfix::after{/*클리어픽스핵*/
       content:"";
-      display: block;
-      clear: both;
-      /*--------------클리어픽스핵--------*/
+      display:block;
+      clear:both;
     }
-    nav{width: 100%;
-      min-width: 1120px;/*최소 넓이를 1120px로 설정*/
-      background-color: #333;
-      color: #fff;
+    /*===================*/
+    nav{
+      width:100%;
+      min-width:1120px;/*최소 넓이를 1120px로 설정*/
+      background-color:#333;
+      color:#fff;
       padding:40px 0;
     }
     nav > .container{
-      
-      width: 1080px;
+      width:1080px;
       padding:0 20px;
-      margin: auto;
+      margin:auto;
     }
+    /*gnb는 왼쪽으로 search아이콘은 오른쪽으로 정렬*/
     nav ul.gnb{float:left;}
     nav .search{float:right;}
-    /*메뉴 아이템 정렬*/
 
+    /*메뉴 아이템 정렬*/
     nav li{
       float:left;
-      font-size: 18px;
-      margin-right: 60px;
+      font-size:18px;
+      margin-right:60px;
       user-select: none;/*글자 선택을 막아주는 속성*/
-    } 
-    
-
+    }
   </style>
 </head>
 <body>
-  <!--nav넓이는 100% 배경색 적용-->
+  <!--nav의 넓이는 100%(배경색을 적용)-->
   <nav>
     <!--container의 넓이는 1080px이고 가운데 정렬-->
     <div class="container clearfix">
       <ul class="gnb">
+        <!--li를 float으로 정렬하고 여백설정-->
         <li><a href="#">SHAMMAH</a></li>
         <li><a href="#">ABOUT</a></li>
         <li><a href="#">NEWS</a></li>
@@ -58,14 +56,9 @@
         <li><a href="#">CONTACT</a></li>
       </ul>
       <div class="search">
-        <img src="images/header02_05.png" alt="">
+        <img src="images/search.png" alt="">
       </div>
     </div>
-    
-    
-      
-    
-    
   </nav>
 </body>
 </html>

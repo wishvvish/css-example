@@ -4,24 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <!-- div(div만 생략가능) .big-area*2>.small-unit*4{$} -->
   <style>
     .big-area{
-      width: 100px;
-      margin: 10px;
-      padding: 10px;
-      background-color: #999;
-      float: left;
-      /*float를 적용한 요소는 자식요소의 높이를 인식한다*/
+      width:100px;
+      margin:10px;
+      padding:10px;
+      background-color:#999;
+      float:left;
+      /*float를 적용한 요소는 자식요소에 float를 적용해도 높이를 인식한다*/
     }
+
     .small-unit{
-      width: 48px;
-      height: 48px;
-      background-color: #333;
-      color: #fff;
-      margin: 1px;
+      width:48px;
+      height:48px;
+      background-color:#333;
+      color:#fff;
+      margin:1px;
       float:left;
     }
+
   </style>
 </head>
 <body>
@@ -38,7 +39,5 @@
     <div class="small-unit">4</div>
   </div>
   
-
-
 </body>
 </html>

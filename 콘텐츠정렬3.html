@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul,li{list-style: none;}
+    .clearfix::after{
+      content: "";
+      display:block;
+      clear: both;
+    }
+    
+    #container{
+      /* outline: solid 1px red; */
+      width: 1200px;
+      margin: auto;
+      padding: 0 10px;/*위아래 0 양옆 10*/
+      box-sizing: border-box;/*가로값 1200px 이상 늘어나지않게 해주려고*/
+    }
+    #container > article{
+      float: left;
+      padding: 30px 40px;/*상하30 좌우40*/
+      box-sizing: border-box;
+    }
+    .box1{
+      width: 360px;
+      height: 480px;
+      background-image: url(images/layout01.png); 
+      color : #fff;
+    }
+    .box2{
+      width: 520px;
+      height: 240px;
+      background-image: url(images/layout02.png);
+      color: #fff;
+    }
+    .box3, .box4{
+      width: 260px;
+      height: 240px;
+      background-color: #fff;
+      color: #333;
+    }
+    .box5{
+      width: 560px;
+      height: 240px;
+      background-image: url(images/layout03.png);
+    }
+    #container > article > h2{
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    #container > article > ul > li{
+      font-size: 12px;
+      line-height: 1.9;
+    }
+    .box1 > hr{
+      width: 20px;
+      border: 1px solid #fff;
+      margin: 20px 0;/*위아래(상하)20px 좌우0*/
+    }
+    .box2 img{
+      margin-top: 20px;
+    }
+    .box3 hr, .box4 hr{
+      width: 20px;
+      border: 1px solid #8ab6cf;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <section id="container" class="clearfix">
+    <article class="box1">
+      <h2>제품기획&middot;개발&middot;생산</h2>
+      <hr>
+      <ul>
+        <li>UV 소독</li>
+        <li>CLEAN</li>
+        <li>소형가전</li>
+        <li>BEAUTY</li>
+      </ul>
+    </article>
+    <article class="box2">
+      <h2>
+        국내를 넘어<br>
+        세계로 도약하는 기업
+      </h2>
+      <img src="images/global_nobel.png">
+    </article>
+    <article class="box3">
+      <h2>Reseach &amp; Develope</h2>
+    <hr>
+    <ul>
+      <li>센서 개발</li>
+      <li>UV LED 적용 기술</li>
+    </ul>
+    </article>
+    <article class="box4">
+      <h2>ODM / OEM</h2>
+    <hr>
+    <ul>
+      <li>제품 기획</li>
+      <li>금형 설계</li>
+      <li>시제품 제작</li>
+      <li>회로 설계</li>
+      <li>양산품 제작</li>
+    </ul>
+    </article>
+    <article class="box5"></article>
+  </section>
+</body>
+</html>
